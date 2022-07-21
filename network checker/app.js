@@ -24,4 +24,4 @@ function networkCheck(number) {
   return network
 }
 
-networkCheck("07056471853")
+console.log(networkCheck("08148510810"))
