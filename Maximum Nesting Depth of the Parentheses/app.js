@@ -42,4 +42,4 @@ var maxDepth = function (s) {
   return result
 }
 
-console.log(maxDepth("(1+(2*3)+((8)/4))+1"))
+maxDepth("(1+(2*3)+((8)/4))+1")
