@@ -10,17 +10,18 @@ let networks = {
 }
 
 function networkCheck(number) {
-  let numberArray = number.split("")
-  let numberString = numberArray.join("")
+  let allNetworks = { ...networks }
   let network = ""
-  for (let key in networks) {
-    for (let i = 0; i < networks[key].length; i++) {
-      if (numberString.includes(networks[key][i])) {
+
+  for (let key in allNetworks) {
+    for (let i = 0; i < allNetworks[key].length; i++) {
+      if (number.includes(allNetworks[key][i])) {
         network = key
       }
     }
   }
+
   return network
 }
 
-console.log(networkCheck("07056471853"))
+networkCheck("07056471853")
