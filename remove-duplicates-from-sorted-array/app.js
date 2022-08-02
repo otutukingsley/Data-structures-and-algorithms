@@ -31,5 +31,9 @@ const removeDuplicates = function (nums) {
     }
   }
 
+  console.log(nums)
+
   return i + 1
 }
+
+removeDuplicates([1, 1, 2])
