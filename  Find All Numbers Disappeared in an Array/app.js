@@ -32,3 +32,24 @@ var findDisappearedNumbers = function (nums) {
   }
   return result
 };
+
+//Solution 2
+//Using a hashSet, create a set that contains all numbers within the range, then remove numbers from the set that exists in the givne array, the numbers remaining in the set are the disappearing numbers
+var findDisappearedNumbers = function (nums) {
+
+  let mySet = new Set()
+
+  for (let i = 1; i <= nums.length; i++) {
+    mySet.add(i)
+  }
+
+  for (let i = 0; i < nums.length; i++) {
+
+    if (mySet.has(nums[i])) {
+      mySet.delete(nums[i])
+    }
+  }
+
+  return Array.from(mySet)
+
+}
