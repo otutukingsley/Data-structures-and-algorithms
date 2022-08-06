@@ -40,3 +40,30 @@ var singleNumber = function (nums) {
 
   return output
 };
+
+
+// Solution 2 
+// Using a hash map we increment the value of each key if it already exists esle we set the value to 1, since there is only one unique number in the array, the key with the value of 1 is the unique number
+
+
+var singleNumber = function (nums) {
+  let result = {}
+
+  for (let i = 0; i < nums.length; i++) {
+
+    if (result[nums[i]] !== undefined) {
+      result[nums[i]] += 1
+    } else {
+      result[nums[i]] = 1
+    }
+
+  }
+
+  for (let key in result) {
+
+    if (result[key] === 1) {
+
+      return key
+    }
+  }
+};
