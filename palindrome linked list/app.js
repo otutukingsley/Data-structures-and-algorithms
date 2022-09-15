@@ -9,26 +9,33 @@
  * @param {ListNode} head
  * @return {boolean}
  */
-var isPalindrome = function(head) {
-  let current = head
-  let result = []
-  
-  while(current){
-      result.push(current.val)
-      current = current.next
+
+//Description
+
+/*
+ Given the head of a singly linked list, return true if it is a 
+ palindrome
+ or false otherwise.
+ */
+
+var isPalindrome = function (head) {
+  let current = head;
+  let result = [];
+
+  while (current) {
+    result.push(current.val);
+    current = current.next;
   }
-  
-  let reslength = result.length - 1
-  
-  for(let i = 0; i < result.length; i++){
-      
-      if(result[i] !== result[reslength]){
-          return false
-      }
-      
-      reslength--;
+
+  let reslength = result.length - 1;
+
+  for (let i = 0; i < result.length; i++) {
+    if (result[i] !== result[reslength]) {
+      return false;
+    }
+
+    reslength--;
   }
-  
-  return true 
-      
+
+  return true;
 };
