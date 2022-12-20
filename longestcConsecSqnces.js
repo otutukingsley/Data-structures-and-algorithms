@@ -1,3 +1,8 @@
+// Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
+
+// You must write an algorithm that runs in O(n) time.
+
+
 var longestConsecutive = function (nums) {
   let charSet = new Set(nums);
   let count = 0;
